@@ -16,9 +16,9 @@ function checkDependencies(){
 module.exports = function(ligle,cfg){
   ligle.addon = ligle.addon || {};
 
-  if(ligle.addon.verifyCode) return;
+  if(ligle.addon.captcha) return;
   checkDependencies();
-  var exportObj = ligle.addon.verifyCode = {};
+  var exportObj = {};
 
   var config = ligle.util.configure(cfg,defaultCfg);
   var engineLogLevel = ligle.cfg.loggerLevel;
@@ -39,6 +39,8 @@ module.exports = function(ligle,cfg){
   exportObj.midware = {};
   exportObj.midware.checkCode = require('./verify-code.js').checkCode;
   exportObj.midware.getCode = require('./verify-code.js').getCode;
+
+  ligle.addon.captcha = exportObj;
 
   return exportObj;
 };
