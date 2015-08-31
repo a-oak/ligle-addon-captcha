@@ -1,6 +1,6 @@
 {
   "name": "ligle-addon-captcha",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "captcha",
   "main": "index.js",
   "scripts": {
