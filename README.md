@@ -1,3 +1,12 @@
+
+ligle-addon-captcha
+=====================
+[![Build Status](https://travis-ci.org/a-oak/ligle-addon-captcha.svg?branch=master)](https://travis-ci.org/a-oak/ligle-addon-captcha)
+[![Build Status](https://travis-ci.org/a-oak/ligle-addon-captcha.svg?branch=develop)](https://travis-ci.org/a-oak/ligle-addon-captcha)
+Copyright (c) 2015 [A-Oak](http://a-oak.com/) Co. Ltd. under MIT LICENSE.
+
+
+
 这是验证码功能的addon。
 
 # 用法
@@ -7,18 +16,18 @@
 
 ```
 cfg = {}; // 这里可以使用配置addon的一些内容，比如路由的地址。
-require('ligle-addon-verifyCode')(ligle,cfg);// 这步实例化addon，并且保存到ligle.addon上
+require('ligle-addon-captcha')(ligle,cfg);// 这步实例化addon，并且保存到ligle.addon上
 
 ...
 
-app.use(ligle.addon.verifyCode.route);//使用addon提供的路由功能
+app.use(ligle.addon.captcha.route);//使用addon提供的路由功能
 ```
 
 ## 使用中间件
 在 xxx.js 中
 
 ```
-var checkCode = ligle.addon.verifyCode.midware.checkCode;
+var checkCode = ligle.addon.captcha.midware.checkCode;
 router.get(checkCode,function(req,res){// 验证验证码是否正确。
   ...
 });
