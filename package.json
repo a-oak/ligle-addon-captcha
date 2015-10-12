@@ -1,14 +1,15 @@
 {
   "name": "ligle-addon-captcha",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "captcha",
   "main": "lib/index.js",
   "scripts": {
     "test": "grunt test"
   },
+  "homepage": "https://github.com/a-oak/ligle-addon-captcha",
   "repository": {
     "type": "git",
-    "url": "https://git.hijack.moe/crackhopper/ligle-addon-verifyCode.git"
+    "url": "https://github.com/a-oak/ligle-addon-captcha.git"
   },
   "keywords": [
     "captcha",
